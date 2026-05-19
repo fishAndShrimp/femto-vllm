@@ -19,6 +19,8 @@ torch::Tensor OnlineSoftmaxCuda(torch::Tensor a);
 torch::Tensor BatchedOnlineSoftmaxCuda(torch::Tensor a);
 
 torch::Tensor GemmCuda(torch::Tensor a, torch::Tensor b);
+torch::Tensor
+GemmWmmaCuda(torch::Tensor a, torch::Tensor b);
 // torch::Tensor
 // GemmRowWiseCuda(torch::Tensor a, torch::Tensor b);
 
@@ -77,6 +79,7 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
             &BatchedOnlineSoftmaxCuda
         )
         .def("GemmCuda", &GemmCuda)
+        .def("GemmWmmaCuda", &GemmWmmaCuda)
         // .def("GemmRowWiseCuda", &GemmRowWiseCuda)
         // .def("FlashAttentionCuda", &FlashAttentionCuda)
         // .def(

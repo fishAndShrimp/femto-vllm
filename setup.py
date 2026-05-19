@@ -64,6 +64,7 @@ setup(
                     "softmax/online_softmax.cu",
                     "softmax/batched_online_softmax.cu",
                     "gemm/gemm.cu",
+                    "gemm/gemm_wmma.cu",
                     # "gemm/gemm_row_wise.cu",
                     # "flash_attention/flash_attention.cu",
                     # "flash_attention/flash_attention_coalesced.cu",
