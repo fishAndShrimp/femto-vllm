@@ -49,8 +49,11 @@ dependencies:
       # LLM ecosystem
       - transformers
       - huggingface_hub
+      - diffusers
+      - einops
 
       # Utilities
       - triton
       - pytest
       - matplotlib
+      - pillow
